@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/pricing/">
+
+    <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    
+
+<link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <a class="navbar-brand fw-bold" href="#">My Weather App <sub>By Piyush Gupta😎</sub></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 
+                 
+                 
+                </ul>
+                <a href="https://my-weather-app-by-piyush-wtnk7x5.gamma.site/" target="_blank"> <button class="btn btn-outline-success">About</button></a>
+                <button class="btn btn-outline-success">Add your city</button>
+                
+              </div>
+            </div>
+          </nav>
+          <form class="d-flex searchcontainer" role="search">
+            <input id="city" class="form-control me-2 " type="search" placeholder="Search your city" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search </button>
+          </form>
+   
+<meta name="theme-color" content="#712cf9">
+   
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
+
+
+
+  <main>
+    <div class="text-center my-4 fs-1 fw-normal">Weather of <span style="color: rgb(14, 14, 126) ;font-weight: bold;" id="cityName" class="fw-bold"></span></div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center my-5">
+        
+      <div class="col">
+        
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Temperature <small class="text-muted fw-light"><span>&#xF5D2;</span></small></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="temp"></span><small class="text-muted fw-light"><span>&#8451;</span></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>temp is </li>
+              
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">explore more</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Wind <small class="text-muted fw-light"><span> &#xF61D; </span></small></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small class="text-muted fw-light"> km/hr</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>wind speed is </li>
+              
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">explore more</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm ">
+          <div class="card-header py-3  ">
+            <h4 class="my-0 fw-normal">Humidity<small class="text-muted fw-light"><span> &#xF493; </span></small></h4>
+          </div></h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="humidity"></span><small class="text-muted fw-light">%</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>humidity is </li>
+            
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">explore more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="display-6 text-center mb-4">Weather of Other Cities</h3>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Temperature</th>
+            <th style="width: 22%;">Wind</th>
+            <th style="width: 22%;">Humidity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Delhi</th>
+            <td><span id="delhi_temp"></span></td>
+            <td><span id="delhi_wind_speed"></span></td>
+            <td><span id="delhi_humidity"></span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">London</th>
+            <td><span id="london_temp"></span></td>
+            <td><span id="london_wind_speed"></span></td>
+            <td><span id="london_humidity"></span></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">New York</th>
+            <td><span id="newyork_temp"></span></td>
+            <td><span id="newyork_wind_speed"></span></td>
+            <td><span id="newyork_humidity"></span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Tokyo</th>
+           
+            <td><span id="tokyo_temp"></span></td>
+            <td><span id="tokyo_wind_speed"></span></td>
+            <td><span id="tokyo_humidity"></span></td>
+          
+        
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  
+
+</div>
+<hr class="m-auto" style="width: 50%">
+<footer class="text-center m-10">
+    Made with 🖤 by Piyush Gupta 😎 
+</footer>
+
+    
+  </body>
+</html>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="./script.js"></script>  
+</body>
+</html>
